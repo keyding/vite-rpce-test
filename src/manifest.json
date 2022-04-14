@@ -1,10 +1,15 @@
 {
+  "name": "__MSG_extName__",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
   "manifest_version": 3,
-  "action": { "default_popup": "index.html" },
   "icons": {
-    "16": "icons/16x16.png",
-    "48": "icons/48x48.png",
-    "128": "icons/128x128.png"
+    "16": "src/icons/128.png",
+    "48": "src/icons/128.png",
+    "128": "src/icons/128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
   },
   "background": {
     "service_worker": "src/background.js"
@@ -14,5 +19,6 @@
       "js": ["src/content-scripts/index.js"],
       "matches": ["https://www.google.com/*"]
     }
-  ]
+  ],
+  "incognito": "split"
 }
